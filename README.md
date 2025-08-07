@@ -1,4 +1,4 @@
-# 📱 Focus Aura – Android App Development
+# 📱 Focus Aura – Web App Development
 
 A productivity app tailored for students to overcome focus-related challenges and build effective study habits.
 
