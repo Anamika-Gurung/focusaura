@@ -36,9 +36,9 @@ A productivity app tailored for students to overcome focus-related challenges an
 
 ## 📱 Screenshots (Designed in Figma)
 
-*(Add images here if available)*  
-You can export Figma frames as PNG and include them like this:
 
-```md
-![Home Screen](images/home_screen.png)
+
+
+
+![Home Screen](https://github.com/Anamika-Gurung/focusaura/blob/main/focusaura%20login%20page.png)
 ![Timer View](images/timer_view.png)
