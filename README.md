@@ -41,4 +41,4 @@ A productivity app tailored for students to overcome focus-related challenges an
 
 
 ![Home Screen](https://github.com/Anamika-Gurung/focusaura/blob/main/focusaura%20login%20page.png)
-![Timer View](images/timer_view.png)
+![Timer View]()
