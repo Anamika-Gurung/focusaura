@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sstyle.css">
+    <script type="module">
+        import { auth, database } from './firebase.js';
+        import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { ref, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        function signup() {
+            const fullName = document.getElementById("fullName").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const phone = document.getElementById("phone").value;
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+
+                    // Save to Database
+                    set(ref(database, 'users/' + user.uid), {
+                        fullName: fullName,
+                        phone: phone,
+                        email: email
+                    });
+
+                    alert("Account Created Successfully!");
+                    window.location.href = "login.html";
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        }
+
+        window.signup = signup; // Ensure it's accessible globally
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-screen">
+            <h2>Sign Up</h2>
+            <form onsubmit="signup(); return false;">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="tel" id="phone" placeholder="Phone No." required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

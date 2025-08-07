@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import { auth } from './firebase.js';
+        import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+        function login() {
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    alert("Login Successful!");
+                    window.location.href = "dashboard.html";
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        }
+
+        window.login = login; // Make function accessible globally
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-screen">
+            <img src="logo.PNG" alt="FocusAura Logo" class="logo">
+            <h2>Welcome Back!</h2>
+            <p>Login to continue</p>
+            <form onsubmit="login(); return false;">
+                <input type="email" id="loginEmail" placeholder="Username" class="input-field">
+                <input type="password" id="loginPassword" placeholder="Password" class="input-field">
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="button">Login</button>
+            </form>
+            
+            <p class="sign-up-link">Don’t have an account? <a href="signup.html">Sign up</a></p>
+            
+        </div>
+    </div>
+</body>
+</html>
+

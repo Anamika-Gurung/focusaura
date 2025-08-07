@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Style Flash Card</title>
+    <link rel="stylesheet" href="flashcard.css">
+</head>
+<body>
+    <!-- Phone Container -->
+    <div class="android-screen">
+        <!-- Header Section -->
+        <div class="header">
+            <h2 class="flash-title">FLASH CARD</h2>
+            <div class="create-card">
+                <span>CREATE NEW CARD</span>
+                <button class="add-btn" onclick="openModal()">+</button>
+            </div>
+        </div>
+
+        <!-- Flash Card Section -->
+        <div class="card-container" id="card-container"></div>
+
+        <!-- Generate AI Flashcard Button -->
+        <div class="create-card">
+            <span>GENERATE AI FLASHCARD</span>
+            <button class="add-btn" onclick="generateAICard()">🤖</button>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="dashboard-link">
+            <a href="dashboard.html">← Back to Dashboard</a>
+        </div>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Create Flash Card</h3>
+            <input type="text" id="question-input" placeholder="Enter your question">
+            <input type="text" id="answer-input" placeholder="Enter your answer">
+            <div class="modal-buttons">
+                <button onclick="addFlashCard()">Done</button>
+                <button onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="flashcard.js"></script>
+</body>
+</html>

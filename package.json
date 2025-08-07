@@ -1,0 +1,19 @@
+{
+  "name": "focusaura",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "build": "mkdir dist && cp -r public/* dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sathvika-K/focusaura.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sathvika-K/focusaura/issues"
+  },
+  "homepage": "https://github.com/Sathvika-K/focusaura#readme"
+}

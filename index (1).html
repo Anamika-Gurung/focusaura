@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Task</h1>
+        <form id="taskForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label for="importance">Level Importance</label>
+            <select id="importance" name="importance">
+                <option value="Very Important">Very Important</option>
+                <option value="Important">Important</option>
+                <option value="Normal">Normal</option>
+            </select>
+
+            <label for="color">Color</label>
+            <div id="color" class="color-options">
+                <input type="radio" id="color1" name="color" value="#b8e994" required>
+                <label for="color1" style="background-color: #b8e994;"></label>
+                
+                <input type="radio" id="color2" name="color" value="#ff9f43">
+                <label for="color2" style="background-color: #ff9f43;"></label>
+                
+                <input type="radio" id="color3" name="color" value="#feca57">
+                <label for="color3" style="background-color: #feca57;"></label>
+                
+                <input type="radio" id="color4" name="color" value="#54a0ff">
+                <label for="color4" style="background-color: #54a0ff;"></label>
+                
+                <input type="radio" id="color5" name="color" value="#ff6b6b">
+                <label for="color5" style="background-color: #ff6b6b;"></label>
+            </div>
+
+            <label for="alarm">Set Alarm</label>
+            <input type="time" id="alarm" name="alarm" required>
+
+            <label for="duration">Time During</label>
+            <input type="time" id="duration" name="duration" required>
+
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" id="home"><img src="Home 2.png" alt="Home"></a></li>
+            <li><a href="#" id="settings"><img src="Setting.png" alt="Settings"></a></li>
+            <li><a href="#" id="add-task"><img src="Icon.png" alt="Add Task"></a></li>
+        </ul>
+    </nav>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

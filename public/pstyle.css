@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #fff, #fef2f2); /* Subtle gradient background */
+    color: #d9534f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+#settingsBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #d9534f;
+}
+
+/* Timer Container */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.timer-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff, #f8d6d6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d9534f;
+    font-size: 32px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Mode Selection */
+.mode-select {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.mode-btn {
+    border: none;
+    background: none;
+    color: #c2c2c2;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+
+.mode-btn.active {
+    color: #d9534f;
+    border-bottom: 2px solid #333; /* Highlight the active button */
+    color: #333; /* Optional: Change text color to indicate active state */
+    
+}
+
+.mode-btn.active::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: #d9534f;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 25%;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, #fff, #fef2f2);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #d9534f;
+}
+
+.play-button {
+    background: #fff;
+    border: none;
+    color: #d9534f;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+/* Modal Hidden by Default */
+.modal {
+    display: none; /* Hidden initially */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+}
+
+/* Modal Content Styling */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #d9534f;
+}
+
+.close:hover {
+    color: #a94442;
+}

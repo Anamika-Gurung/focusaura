@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="pstyle.css">
+    <script src="pomodoro.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>POMODORO</h1>
+        <button id="settingsBtn">⚙️</button>
+    </header>
+
+    <!-- Timer Display -->
+    <div class="timer-container">
+        <div class="timer-circle">
+            <span id="timerDisplay">25:00</span>
+        </div>
+    </div>
+
+    <!-- Navigation for Pomodoro, Short Break, Long Break -->
+    <div class="mode-select">
+        <button class="mode-btn active" id="pomodoroMode">pomodoro</button>
+        <button class="mode-btn" id="shortBreakMode">short break</button>
+        <button class="mode-btn" id="longBreakMode">long break</button>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="controls">
+        <button id="startBtn">▶️</button>
+        <button id="pauseBtn">⏸️</button>
+        <button id="resetBtn">🔄</button>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Settings</h2>
+            <label>Pomodoro (mins): <input type="number" id="pomodoroInput" value="25"></label>
+            <label>Short Break (mins): <input type="number" id="shortBreakInput" value="5"></label>
+            <label>Long Break (mins): <input type="number" id="longBreakInput" value="20"></label>
+            <button id="saveSettings">Save</button>
+        </div>
+    </div>
+
+    <!-- Return to Dashboard -->
+    <div class="dashboard-link">
+        <a href="dashboard.html">← Back to Dashboard</a>
+    </div>
+</body>
+</html>

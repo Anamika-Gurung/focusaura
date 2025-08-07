@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="todo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Task</h1>
+        <form id="taskForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter task name" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label for="importance">Level of Importance</label>
+            <select id="importance" name="importance">
+                <option value="Very Important">Very Important</option>
+                <option value="Important">Important</option>
+                <option value="Normal">Normal</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FFECE6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff6f2;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+h1, h2 {
+    color: #944029;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #944029;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #f8d1c7;
+}
+
+.button {
+    background-color: #a13f2e;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #8b3425;
+}
+
+.button-group button {
+    margin: 10px 0;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.remember-forgot label {
+    font-size: 0.9rem;
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: #a13f2e;
+}
+
+.sign-up-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.social-icons span {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #944029;
+}
